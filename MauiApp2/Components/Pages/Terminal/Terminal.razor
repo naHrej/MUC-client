@@ -1,0 +1,13 @@
+@inject IJSRuntime JSRuntime
+<h3>Terminal</h3>
+
+<div class="@_client.Id" id="AZUHz3kQsgMj">
+    @{
+    List<string> messagesCopy = new List<string>(_messages);
+    }
+    @foreach (var line in messagesCopy)
+    {
+    <span>@((MarkupString)line)</span>
+    }
+</div>
+<textarea id="SdWiqHtqa" @bind="_buffer" @oninput="OnInput" @onkeyup="OnKeyUp"></textarea>

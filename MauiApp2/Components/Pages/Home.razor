@@ -1,0 +1,6 @@
+﻿@page "/"
+
+@foreach (var terminal in _terminals)
+{
+    @terminal.Render()
+}
